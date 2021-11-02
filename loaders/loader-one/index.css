@@ -1,0 +1,182 @@
+:root {
+  --dot-one: #eb68a7;
+  --dot-two: #fdb7c1;
+  --dot-three: #fef490;
+  --dot-four: #d1b3eb;
+  --dot-five: #b3ebd6;
+  --reference: #2cff10;
+  --reference-hover: #87ff77;
+  --black: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.loader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 70%;
+}
+
+div > div {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  margin: 8px;
+}
+
+div > div:nth-child(1) {
+  background-color: var(--dot-one);
+}
+
+div:nth-child(2):not(.reference) {
+  background-color: var(--dot-two);
+}
+
+div:nth-child(3) {
+  background-color: var(--dot-three);
+}
+
+div:nth-child(4) {
+  background-color: var(--dot-four);
+}
+
+div:nth-child(5) {
+  background-color: var(--dot-five);
+}
+
+.reference {
+  position: absolute;
+  align-self: flex-end;
+}
+
+a {
+  color: var(--reference);
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--reference-hover);
+}
+
+@keyframes loader-rotate-up {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(90deg);
+  }
+  95% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes loader-rotate-down {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(-90deg);
+  }
+  95% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes blink-animation {
+  0% {
+  }
+  25% {
+    visibility: hidden;
+  }
+  50% {
+  }
+  75% {
+    visibility: hidden;
+  }
+  100% {
+  }
+}
+
+@keyframes resize-animation-one {
+  0% {
+    height: 23px;
+  }
+  25% {
+    height: 140px;
+    border-radius: 15px;
+  }
+  50% {
+    height: 23px;
+  }
+  75% {
+    height: 140px;
+    border-radius: 15px;
+  }
+  100% {
+    height: 23px;
+  }
+}
+
+@keyframes resize-animation-two {
+  0% {
+    height: 23px;
+  }
+  25% {
+    height: 70px;
+    border-radius: 15px;
+  }
+  50% {
+    height: 23px;
+  }
+  75% {
+    height: 70px;
+    border-radius: 15px;
+  }
+  100% {
+    height: 23px;
+  }
+}
+
+@keyframes resize-animation-three {
+  0% {
+    height: 23px;
+  }
+  25% {
+    height: 200px;
+    border-radius: 15px;
+  }
+  50% {
+    height: 23px;
+  }
+  75% {
+    height: 200px;
+    border-radius: 15px;
+  }
+  100% {
+    height: 23px;
+  }
+}

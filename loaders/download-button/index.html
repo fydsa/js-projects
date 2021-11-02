@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = 'stylesheet' type = 'text/css' href = 'index.css'>
+        <script src = 'index.js' defer></script>
+    </head>
+    <body>
+        <button class = 'download'>
+            <div>
+                <svg>
+                    <use href = '#loading' />
+                    <use href = '#done'/>
+                </svg>
+                <span>Download</span>
+            </div>
+            <div>
+            </div>
+        </button>
+        <svg>
+            <symbol id = 'loading' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <g>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </g>
+            </symbol>
+            <symbol id = 'done' viewBox="0 0 24 24" class = 'done'>
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+            </symbol>
+        </svg>
+        <div class = 'reference'>
+            <a href = 'https://dribbble.com/shots/14911343-Download-Button-Micro-Interaction-Shot'>
+                Source of Inspiration
+            </a>
+        </div>
+    </body>
+</html>
