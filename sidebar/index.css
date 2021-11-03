@@ -1,6 +1,7 @@
 :root {
   --bg-one: #090909;
   --bg-two: #424242;
+  --sidebar: #070707;
   --selected: #6bfa50;
 }
 
@@ -12,6 +13,7 @@
 
 body {
   background-image: radial-gradient(var(--bg-two), var(--bg-one) 90%);
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,5 +22,13 @@ body {
 }
 
 .sidebar {
+  width: 18rem;
+  height: 45rem;
+  background-color: var(--sidebar);
+  border-radius: 1rem;
+  opacity: 0.25;
+}
+
+aside {
   display: none;
 }
