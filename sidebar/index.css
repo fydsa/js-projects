@@ -80,7 +80,8 @@ button {
   cursor: pointer;
 }
 
-button:hover div > span {
+button:hover div > span,
+.selected-text {
   color: var(--text-selected);
   opacity: 1;
 }
@@ -113,8 +114,25 @@ ul:nth-child(4) {
   overflow: hidden;
 }
 
-span {
+span,
+.deselected-text {
   color: var(--text-deselected);
   font-size: 1rem;
   opacity: 0.5;
+}
+
+.indicator {
+  position: absolute;
+  width: 0.5rem;
+  height: 3.2rem;
+  background-color: var(--selected);
+  box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1),
+    0.5rem 0 1.5rem 0.01rem var(--selected);
+  left: -0.65rem;
+  top: 7.35rem;
+  border-radius: 0.3rem 0.25rem 0.25rem 0.3rem;
+}
+
+button div {
+  pointer-events: none;
 }
