@@ -141,7 +141,7 @@ ul:nth-child(4) {
 span,
 .deselected-text {
   color: var(--text-deselected);
-  font-size: 1rem;
+  font-size: 1.2rem;
   opacity: 0.5;
 }
 
