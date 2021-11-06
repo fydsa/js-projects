@@ -92,8 +92,9 @@ button:hover div > span,
 }
 
 button:hover div > svg {
-  stroke: var(--text-selected);
-  opacity: 1;
+  stroke: var(--text-selected) !important;
+  opacity: 1 !important;
+  fill: var(--text-selected);
 }
 
 button > div {
