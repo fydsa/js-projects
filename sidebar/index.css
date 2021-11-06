@@ -26,15 +26,16 @@ body {
 
 .sidebar {
   position: relative;
-  width: 18.5rem;
+  width: var(--sidebar-width);
   height: 50rem;
   border-radius: 10px;
+  transition: width 0.5s ease-in-out;
 }
 
 .sidebar::before {
   content: "";
   position: absolute;
-  width: 18.5rem;
+  width: var(--sidebar-width);
   height: 50rem;
   background-color: rgb(154 154 154 / 10%);
   border-radius: 10px;
@@ -50,12 +51,11 @@ body {
   background-color: var(--selected);
   height: 100%;
   border-radius: 10px;
-  /* left: 18.1rem; */
-  /* top: 0.1rem; */
   overflow: hidden;
 }
 
-.open-anchor {
+.open-anchor,
+.close-anchor {
   position: absolute;
   width: 2rem;
   height: 2rem;
@@ -63,6 +63,7 @@ body {
   background-color: var(--selected);
   top: 11.5rem;
   left: -0.85rem;
+  cursor: pointer;
 }
 
 .open-anchor::after {
@@ -75,11 +76,21 @@ body {
   top: 0.5rem;
 }
 
+.close-anchor::after {
+  content: "";
+  position: absolute;
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-right: 0.8rem solid var(--bg-two);
+  left: 0.45rem;
+  top: 0.5rem;
+}
+
 .expand-sidebar {
   position: absolute;
   width: 2rem;
   height: 100%;
-  left: 18.1rem;
+  left: calc(var(--sidebar-width) - 0.4rem);
   z-index: 2;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
@@ -95,7 +106,6 @@ aside {
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
-  /* height: 100px; */
 }
 
 nav {
@@ -145,7 +155,7 @@ button > div {
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-  padding: 0 1.5rem;
+  padding: 0rem 0rem 0rem 1.25rem;
 }
 
 svg {

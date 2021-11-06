@@ -1,5 +1,7 @@
 const buttons = document.querySelectorAll("button");
 
+const buttons_span = document.querySelectorAll("button > div> span");
+
 const indicator = document.querySelector(".indicator");
 
 const nav = document.querySelector("nav");
@@ -60,4 +62,30 @@ function clickItem(e) {
     selected_item.getBoundingClientRect().top -
     2
   }px`;
+}
+
+const anchor = document.querySelector(".expand-sidebar > div:nth-child(2)");
+
+const sidebar = document.querySelector(".sidebar");
+sidebar.style.setProperty("--sidebar-width", "18.5rem");
+
+const sidebar_open = sidebar.getAttribute("open");
+
+anchor.addEventListener("click", resizeSidebar);
+
+function resizeSidebar() {
+  let sidebar_open = sidebar.getAttribute("open");
+  if (sidebar_open === "true") {
+    buttons_span.forEach((el) => (el.style.display = "none"));
+    sidebar.style.setProperty("--sidebar-width", "5rem");
+    sidebar.setAttribute("open", "false");
+    anchor.className = "open-anchor";
+  } else {
+    sidebar.setAttribute("open", "true");
+    sidebar.style.setProperty("--sidebar-width", "18.5rem");
+    anchor.className = "close-anchor";
+    setTimeout(() => {
+      buttons_span.forEach((el) => (el.style.display = "inline"));
+    }, 200);
+  }
 }
