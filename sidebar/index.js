@@ -1,6 +1,6 @@
 const buttons = document.querySelectorAll("button");
 
-const buttons_span = document.querySelectorAll("button > div> span");
+const buttons_span = document.querySelectorAll("span");
 
 const indicator = document.querySelector(".indicator");
 
