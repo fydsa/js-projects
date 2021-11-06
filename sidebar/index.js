@@ -56,6 +56,7 @@ function clickItem(e) {
 
   inner_svg.setAttribute("stroke", "#ffffff");
   inner_svg.style.opacity = "1";
+  inner_svg.style.animation = "move-svg 0.5s 0.2s";
 
   indicator.style.top = `${
     -nav.getBoundingClientRect().top +
