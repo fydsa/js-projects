@@ -26,19 +26,15 @@ body {
 
 .sidebar {
   position: relative;
-  width: 20rem;
+  width: 18.5rem;
   height: 50rem;
-  /* background-color: rgb(154 154 154 / 10%); */
   border-radius: 10px;
-  /* opacity: 0.3; */
-  /* box-shadow: inset 0 0 0.2rem 0.03rem rgb(154 154 154 / 90%),
-    0 0 0.1rem 0.1rem rgb(0 0 0 / 70%); */
 }
 
 .sidebar::before {
   content: "";
   position: absolute;
-  width: 20rem;
+  width: 18.5rem;
   height: 50rem;
   background-color: rgb(154 154 154 / 10%);
   border-radius: 10px;
@@ -46,6 +42,51 @@ body {
   box-shadow: inset 0 0 0.2rem 0.03rem rgb(154 154 154 / 90%),
     0 0 0.1rem 0.1rem rgb(0 0 0 / 70%);
   opacity: 0.3;
+}
+
+.side-border {
+  position: absolute;
+  width: 0.3rem;
+  background-color: var(--selected);
+  height: 100%;
+  border-radius: 10px;
+  /* left: 18.1rem; */
+  /* top: 0.1rem; */
+  overflow: hidden;
+}
+
+.open-anchor {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--selected);
+  top: 11.5rem;
+  left: -0.85rem;
+}
+
+.open-anchor::after {
+  content: "";
+  position: absolute;
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-left: 0.8rem solid var(--bg-two);
+  left: 0.7rem;
+  top: 0.5rem;
+}
+
+.expand-sidebar {
+  position: absolute;
+  width: 2rem;
+  height: 100%;
+  left: 18.1rem;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.expand-sidebar:hover {
+  opacity: 1;
 }
 
 aside {
@@ -64,6 +105,7 @@ nav {
   display: flex;
   flex-direction: column;
   overflow: auto;
+  z-index: 1;
 }
 
 ul {
@@ -128,6 +170,7 @@ ul:nth-child(2) {
 ul:nth-child(4) {
   margin-top: auto;
   overflow: hidden;
+  margin-bottom: 0.5rem;
 }
 
 span,
