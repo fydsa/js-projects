@@ -71,6 +71,8 @@ sidebar.style.setProperty("--sidebar-width", "18.5rem");
 
 const sidebar_open = sidebar.getAttribute("open");
 
+const badge = document.querySelector(".badge");
+
 anchor.addEventListener("click", resizeSidebar);
 
 function resizeSidebar() {
@@ -80,12 +82,14 @@ function resizeSidebar() {
     sidebar.style.setProperty("--sidebar-width", "5rem");
     sidebar.setAttribute("open", "false");
     anchor.className = "open-anchor";
+    badge.className = "badge badge-attached";
   } else {
     sidebar.setAttribute("open", "true");
     sidebar.style.setProperty("--sidebar-width", "18.5rem");
     anchor.className = "close-anchor";
     setTimeout(() => {
       buttons_span.forEach((el) => (el.style.display = "inline"));
+      badge.className = "badge";
     }, 200);
   }
 }
