@@ -1,3 +1,9 @@
 :root {
   --bg: #3aa593;
 }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
