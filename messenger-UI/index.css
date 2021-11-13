@@ -19,4 +19,5 @@ body {
 
 .messenger {
   position: relative;
+  display: flex;
 }
