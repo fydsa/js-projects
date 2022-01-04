@@ -1,23 +1,23 @@
-import React from "react";
+// import React from "react";
 
 const Hamburger = ({
   className = "h-6 w-6",
   fill = "none",
   stroke = "currentColor",
-  stokeWidth = 2,
+  strokeWidth = 2,
 }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6"
-      fill="none"
+      className={className}
+      fill={fill}
       viewBox="0 0 24 24"
-      stroke="currentColor"
+      stroke={stroke}
     >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={2}
+        strokeWidth={strokeWidth}
         d="M4 6h16M4 12h16M4 18h16"
       />
     </svg>
