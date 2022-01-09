@@ -41,6 +41,7 @@ function clickItem(e) {
 
   previous_selected_item_svg.setAttribute("stroke", "#c0c0c0");
   previous_selected_item_svg.style.opacity = "0.5";
+  previous_selected_item_svg.style.animation = "none";
 
   let selected_item = e.target;
 

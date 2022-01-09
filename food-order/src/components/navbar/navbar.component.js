@@ -16,14 +16,14 @@ function Navbar() {
       <div className="nav-left" id={showLinks ? "close" : "open"}>
         <img src={logo} />
         <div className="hide-links">
-          <Link to="home">Home</Link>
+          <Link to="">Home</Link>
           <Link to="menu">Menu</Link>
           <Link to="about">About</Link>
           <Link to="contact">Contact</Link>
         </div>
       </div>
       <div className="nav-right">
-        <Link to="home">Home</Link>
+        <Link to="">Home</Link>
         <Link to="menu">Menu</Link>
         <Link to="about">About</Link>
         <Link to="contact">Contact</Link>
