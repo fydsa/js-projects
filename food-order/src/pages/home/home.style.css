@@ -1,7 +1,9 @@
 .home {
   display: flex;
+  height: 90vh;
+  width: 100%;
   justify-content: center;
-  align-items: left;
+  align-items: flex-start;
   flex-direction: column;
   background-image: url("../../assets//food.jpeg");
   background-position: center;

@@ -5,6 +5,7 @@ import Home from "./pages/home/home.page";
 import Menu from "./pages/menu/menu.page";
 import About from "./pages/about/about.page";
 import Contact from "./pages/contact/contact.page";
+import Footer from "./components/footer/footer.component";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" exact element={<About />} />
           <Route path="/contact" exact element={<Contact />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
